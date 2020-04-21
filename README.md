@@ -43,4 +43,3 @@ Xen and ChJees for letting me use regen code from Logann Race mod
 Gloomylynx for letting me use and edit Gloomy Face mod
 Erdelf for Humanoid Alien Races 2.0
 Chicken Plucker for hair use in screenshot
-
