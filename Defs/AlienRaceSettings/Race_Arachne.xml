@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+    <defName>Arachne</defName>
+    <label>arachne</label>
+    <description>Arachne race lineage can be traced back to Arachne homeworld where the temperature fluctuate between cold and warm.\nArachnes over thousands of generations began to adapt to these temperature and ables themselves to withstand cold but in return have less tolerance to the heat</description>
+    <alienRace>
+      <generalSettings>
+        <maleGenderProbability>-1</maleGenderProbability>
+        <immuneToAge>false</immuneToAge>
+        <forcedRaceTraitEntries>
+          <li>
+            <defName>Brawler</defName>
+            <chance>20</chance>
+          </li>
+          <li>
+            <defName>Beauty</defName>
+            <degree>2</degree>
+            <chance>25</chance>
+          </li>
+        </forcedRaceTraitEntries>
+        <disallowedTraits>
+          <li>Nudist</li>
+          <li>Ugly</li>
+          <li>Pyromaniac</li>
+        </disallowedTraits>
+        <maxDamageForSocialfight>8</maxDamageForSocialfight>
+        <humanRecipeImport>true</humanRecipeImport>
+
+        <alienPartGenerator>
+          <aliencrowntypes>
+            <li>Average_Normal</li>
+            <li>Average_Pointy</li>
+            <li>Average_Wide</li>
+            <li>Narrow_Normal</li>
+            <li>Narrow_Pointy</li>
+            <li>Narrow_Wide</li>
+          </aliencrowntypes>
+          <alienbodytypes>
+            <li>Female</li>
+          </alienbodytypes>
+          <alienskincolorgen Class="ColorGenerator_Options">
+            <options>
+              <li>
+                <weight>10</weight>
+                <only>RGBA(1.0,1.0,1.0,1)</only>
+              </li>
+              <li>
+                <weight>5</weight>
+                <only>RGBA(0.7,0.6,0.6,1)</only>
+              </li>
+              <li>
+                <weight>5</weight>
+                <only>RGBA(0.5,0.3,0.0,1)</only>
+              </li>
+            </options>
+          </alienskincolorgen>
+          <alienskinsecondcolorgen Class="ColorGenerator_Options">
+            <options>
+              <!-- ============================ Pink ========================== -->
+              <li>
+                <weight>10</weight>
+                <only>RGBA(1,0.6,0.8,1)</only>
+              </li>
+              <!-- ============================ Blue ========================== -->
+              <li>
+                <weight>10</weight>
+                <only>RGBA(0.3,0.6,1,1)</only>
+              </li>
+              <!-- ============================ Purple ========================== -->
+              <li>
+                <weight>10</weight>
+                <only>RGBA(0.5,0.5,1,1)</only>
+              </li>
+              <!-- ============================ Orange ========================== -->
+              <li>
+                <weight>10</weight>
+                <only>RGBA(1,0.8,0.3,1)</only>
+              </li>
+              <!-- ============================ Black ========================== -->
+              <li>
+                <weight>5</weight>
+                <only>RGBA(0.5,0.5,0.5,1)</only>
+              </li>
+              <!-- ============================ Green ========================== -->
+              <li>
+                <weight>10</weight>
+                <only>RGBA(0.5,0.8,0.5,1)</only>
+              </li>
+            </options>
+          </alienskinsecondcolorgen>
+          <customDrawSize>(1, 1)</customDrawSize>
+          <customHeadDrawSize>(1.0, 1.0)</customHeadDrawSize>
+          <customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
+          <customPortraitHeadDrawSize>(1.0, 1.0)</customPortraitHeadDrawSize>
+          <headOffset>(0.0, 0.0)</headOffset>
+
+          <bodyAddons>
+            <li>
+              <drawSize>1</drawSize>
+              <path>Things/Arachne/Body/Spiderbody</path>
+              <bodyPart>Waist</bodyPart>
+              <inFrontOfBody>false</inFrontOfBody>
+              <useSkinColor>true</useSkinColor>
+              <layerOffset>0.02</layerOffset>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Female>(-0.44, -0.17)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Average_Normal>(0, 0)</Average_Normal>
+                  </crownTypes>
+                </south>
+                <north>
+                  <bodyTypes>
+                    <Female>(0, 0)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Average_Normal>(0, 0)</Average_Normal>
+                  </crownTypes>
+                </north>
+                <east>
+                  <bodyTypes>
+                    <Female>(0.05, -0.05)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Average_Normal>(0, 0)</Average_Normal>
+                  </crownTypes>
+                </east>
+              </offsets>
+              <drawnInBed>false</drawnInBed>
+            </li>
+            <li>
+              <drawSize>1</drawSize>
+              <path>Things/Arachne/Body/Spiderbody2</path>
+              <bodyPart>Waist</bodyPart>
+              <inFrontOfBody>false</inFrontOfBody>
+              <useSkinColor>true</useSkinColor>
+              <layerOffset>0.01</layerOffset>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Female>(0, 0)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Average_Normal>(0, 0)</Average_Normal>
+                  </crownTypes>
+                </south>
+                <north>
+                  <bodyTypes>
+                    <Female>(-0.02, 0)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Average_Normal>(0, 0)</Average_Normal>
+                  </crownTypes>
+                </north>
+                <east>
+                  <bodyTypes>
+                    <Female>(0, 0)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Average_Normal>(0, 0)</Average_Normal>
+                  </crownTypes>
+                </east>
+              </offsets>
+              <drawnInBed>false</drawnInBed>
+            </li>
+            <li>
+              <drawSize>1</drawSize>
+              <path>Things/Arachne/Body/Spiderleg</path>
+              <bodyPart>Waist</bodyPart>
+              <inFrontOfBody>true</inFrontOfBody>
+              <useSkinColor>true</useSkinColor>
+              <layerOffset>0.01</layerOffset>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Female>(-0.44, -0.16</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Average_Normal>(0, 0)</Average_Normal>
+                  </crownTypes>
+                </south>
+                <north>
+                  <bodyTypes>
+                    <Female>(0, 0)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Average_Normal>(0, 0)</Average_Normal>
+                  </crownTypes>
+                </north>
+                <east>
+                  <bodyTypes>
+                    <Female>(0.05, -0.05)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Average_Normal>(0, 0)</Average_Normal>
+                  </crownTypes>
+                </east>
+              </offsets>
+              <drawnInBed>false</drawnInBed>
+            </li>
+          </bodyAddons>
+
+        </alienPartGenerator>
+
+      </generalSettings>
+
+      <graphicPaths>
+        <li>
+          <head>Things/Arachne/Head/</head>
+          <body>Things/Arachne/Body/</body>
+        </li>
+      </graphicPaths>
+
+      <hairSettings>
+        <hasHair>true</hasHair>
+        <getsGreyAt>200</getsGreyAt>
+        <hairTags>
+          <li>Urban</li>
+          <li>Rural</li>
+          <li>Tribal</li>
+          <li>Punk</li>
+        </hairTags>
+      </hairSettings>
+
+      <thoughtSettings>
+
+        <cannotReceiveThoughts>
+          <li>TrappedIndoors</li>
+          <li>StuckIndoors</li>
+          <li>Naked</li>
+        </cannotReceiveThoughts>
+
+      </thoughtSettings>
+      <raceRestriction>
+        <apparelList>
+          <li>Arachne_Armor</li>
+          <li>Arachne_Armor_Helmet</li>
+          <li>Arachne_Power_Armor</li>
+          <li>Arachne_Power_Helmet</li>
+        </apparelList>
+      </raceRestriction>
+    </alienRace>
+    <statBases>
+      <Mass>80</Mass>
+      <MarketValue>2000</MarketValue>
+      <MoveSpeed>5.6</MoveSpeed>
+      <Flammability>1.0</Flammability>
+      <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+      <ComfyTemperatureMax>18</ComfyTemperatureMax>
+      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+
+      <LeatherAmount>30</LeatherAmount>
+      <GlobalLearningFactor>1.05</GlobalLearningFactor>
+      <PainShockThreshold>1.1</PainShockThreshold>
+      <PsychicSensitivity>1.25</PsychicSensitivity>
+      <ToxicSensitivity>0.85</ToxicSensitivity>
+      <PlantWorkSpeed>0.85</PlantWorkSpeed>
+      <PlantHarvestYield>0.9</PlantHarvestYield>
+      <SocialImpact>0.9</SocialImpact>
+      <NegotiationAbility>0.85</NegotiationAbility>
+      <TradePriceImprovement>0.85</TradePriceImprovement>
+      <HuntingStealth>1.3</HuntingStealth>
+      <TailoringSpeed>1.05</TailoringSpeed>
+      <SmithingSpeed>1.05</SmithingSpeed>
+      <DrugSynthesisSpeed>1.05</DrugSynthesisSpeed>
+      <DrugCookingSpeed>1.05</DrugCookingSpeed>
+      <ButcheryFleshEfficiency>1.1</ButcheryFleshEfficiency>
+      <TameAnimalChance>1.15</TameAnimalChance>
+      <TrainAnimalChance>1.15</TrainAnimalChance>
+      <AnimalGatherSpeed>1.15</AnimalGatherSpeed>
+
+      <AimingDelayFactor>0.9</AimingDelayFactor>
+      <MeleeDodgeChance>1.1</MeleeDodgeChance>
+      <MeleeHitChance>1.1</MeleeHitChance>
+      <CarryingCapacity>85</CarryingCapacity>
+    </statBases>
+    <tools>
+
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>ArachneClaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>30</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>ArachneClaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>30</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>250</lifeExpectancy>
+      <leatherDef>Leather_Arachne</leatherDef>
+      <nameCategory>HumanStandard</nameCategory>
+      <hasGenders>true</hasGenders>
+      <body>Arachne_body</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1.3</baseHealthScale>
+      <baseHungerRate>1.15</baseHungerRate>
+      <foodType>OmnivoreHuman</foodType>
+      <nuzzleMtbHours>3</nuzzleMtbHours>
+      <gestationPeriodDays>24</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeToddler</def>
+          <minAge>1.2</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>4</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>11</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>16</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <ageGenerationCurve>
+        <points>
+          <li>(16,0)</li>
+          <li>(17,200)</li>
+          <li>(20,100)</li>
+          <li>(30,100)</li>
+          <li>(40,100)</li>
+          <li>(50,50)</li>
+          <li>(120,30)</li>
+          <li>(180,5)</li>
+          <li>(250,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>ArachneX</li>
+      </hediffGiverSets>
+    </race>
+  </AlienRace.ThingDef_AlienRace>
+
+</Defs>

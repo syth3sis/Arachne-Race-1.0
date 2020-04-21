@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<SoundDef>
+    <defName>Shot_SMG</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+		<subSounds>
+			<li>
+				<grains>
+				<li Class="AudioGrain_Folder">
+				<clipFolderPath>ArachnePninetySound/ArachnePninetySound</clipFolderPath>
+			</li>
+				</grains>      
+				<volumeRange>
+					<min>6</min>        
+					<max>13</max>
+				</volumeRange>      
+				<pitchRange>
+					<min>1</min>        
+					<max>1</max>
+				</pitchRange>      
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+  <SoundDef>
+    <defName>InteractSMG</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>ArachnePninetySound/SMGEquip</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>10</min>
+          <max>20</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+	</Defs>

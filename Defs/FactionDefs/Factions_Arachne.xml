@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Abstract="True" Name="ArachneFactionBase">
+    <colorSpectrum>
+      <li>(0.0863, 0.0863, 0.0863)</li>
+      <li>(0.8706, 0.4063, 0.4063)</li>
+    </colorSpectrum>
+  </FactionDef>
+
+  <FactionDef Parent="ArachneFactionBase">
+    <defName>ArachnePlayerColony</defName>
+    <label>Arachne Colony</label>
+    <description>Arachne settlers searching for a new home</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Arachne</basicMemberKind>
+    <pawnSingular>colonist</pawnSingular>
+    <pawnsPlural>colonists</pawnsPlural>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <techLevel>Industrial</techLevel>
+    <backstoryCategories>
+      <li>Civil</li>
+    </backstoryCategories>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <hairTags>
+      <li>Tribal</li>
+      <li>Rural</li>
+      <li>Urban</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+        <li>Steel</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+  <FactionDef>
+    <defName>ArachneColony</defName>
+    <label>Arachne Colony</label>
+    <description>A colony of Arachne Settlers</description>
+    <basicMemberKind>ArachneSettler</basicMemberKind>
+    <pawnSingular>settler</pawnSingular>
+    <pawnsPlural>settlers</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Elder</leaderTitle>
+    <goodwillDailyGain>0.20</goodwillDailyGain>
+    <goodwillDailyFall>0.40</goodwillDailyFall>
+    <startingGoodwill>
+      <min>10</min>
+      <max>40</max>
+    </startingGoodwill>
+    <fixedName>Arachne Colony</fixedName>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <techLevel>Industrial</techLevel>
+    <geneticVariance>0.1</geneticVariance>
+    <backstoryCategories>
+      <li>Civil</li>
+    </backstoryCategories>
+    <hairTags>
+      <li>Urban</li>
+      <li>Rural</li>
+      <li>Tribal</li>
+    </hairTags>
+    <naturalColonyGoodwill>
+      <min>-30</min>
+      <max>30</max>
+    </naturalColonyGoodwill>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+    <caravanTraderKinds>
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_PirateMerchant</li>
+      <li>Caravan_Outlander_Exotic</li>
+    </caravanTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-50</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 200)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <ArachneSettler>5</ArachneSettler>
+          <ArachneSoldier>9</ArachneSoldier>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <ArachneSettler>5</ArachneSettler>
+          <ArachneColonist>5</ArachneColonist>
+          <ArachneSoldier>9</ArachneSoldier>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <ArachneTrader>1</ArachneTrader>
+        </traders>
+        <carriers>
+          <Muffalo>4</Muffalo>
+        </carriers>
+        <guards>
+          <ArachneSettler>5</ArachneSettler>
+          <ArachneColonist>3</ArachneColonist>
+          <ArachneSoldier>9</ArachneSoldier>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <ArachneSettler>5</ArachneSettler>
+          <ArachneColonist>5</ArachneColonist>
+          <ArachneSoldier>9</ArachneSoldier>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/ArachneBaseIcon</homeIconPath>
+    <expandingIconTexture>World/ArachneBaseIcon</expandingIconTexture>
+  </FactionDef>
+  <FactionDef Parent="ArachneMiliBase">
+    <defName>ArachneMilitiaBase</defName>
+    <label>Arache Militia</label>
+    <description>Arachne Militia Camp</description>
+    <basicMemberKind>ArachneMilitia</basicMemberKind>
+    <pawnSingular>militia</pawnSingular>
+    <pawnsPlural>militias</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <settlementGenerationWeight>0.35</settlementGenerationWeight>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <canMakeRandomly>true</canMakeRandomly>
+    <autoFlee>false</autoFlee>
+    <leaderTitle>Captain</leaderTitle>
+    <startingGoodwill>
+      <min>-70</min>
+      <max>-20</max>
+    </startingGoodwill>
+    <fixedName>Arachne Militia</fixedName>
+    <settlementNameMaker>NamerFactionPirate</settlementNameMaker>
+    <techLevel>Industrial</techLevel>
+    <geneticVariance>0.1</geneticVariance>
+    <backstoryCategories>
+      <li>Raider</li>
+    </backstoryCategories>
+    <hairTags>
+      <li>Urban</li>
+      <li>Rural</li>
+      <li>Tribal</li>
+    </hairTags>
+    <naturalColonyGoodwill>
+      <min>-80</min>
+      <max>-50</max>
+    </naturalColonyGoodwill>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+    <caravanTraderKinds>
+      <li>Caravan_Outlander_PirateMerchant</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+    </caravanTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-50</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(400,100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <ArachneElite>1</ArachneElite>
+          <ArachneMilitia>8</ArachneMilitia>
+          <ArachneAssault>5</ArachneAssault>
+          <ArachneAssassin>2</ArachneAssassin>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <ArachneElite>2</ArachneElite>
+          <ArachneMilitia>8</ArachneMilitia>
+          <ArachneAssault>5</ArachneAssault>
+          <ArachneAssassin>5</ArachneAssassin>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <ArachneTrader>1</ArachneTrader>
+        </traders>
+        <carriers>
+          <Muffalo>3</Muffalo>
+        </carriers>
+        <guards>
+          <ArachneElite>2</ArachneElite>
+          <ArachneMilitia>6</ArachneMilitia>
+          <ArachneAssault>7</ArachneAssault>
+          <ArachneAssassin>7</ArachneAssassin>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <ArachneElite>9</ArachneElite>
+          <ArachneMilitia>5</ArachneMilitia>
+          <ArachneAssault>7</ArachneAssault>
+          <ArachneAssassin>7</ArachneAssassin>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/ArachneMilBaseIcon</homeIconPath>
+    <expandingIconTexture>World/ArachneMilBaseIcon</expandingIconTexture>
+  </FactionDef>
+
+</Defs>
